@@ -23,12 +23,14 @@ pipeline {
         }
         stage('CPP Containers tests') {
             steps {
-                sh 'CPP_containers/make'
+                sh 'cd CPP_containers'
+                sh 'make'
             }
         }
         stage('CPP Containers clean') {
             steps {
-                sh 'CPP_containers/clean'
+                sh 'cd CPP_containers'
+                sh 'make clean'
             }
         }
     }
