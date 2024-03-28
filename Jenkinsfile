@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                for(x in 1..3){
+                    sh './test' + x + '.sh'
+                }
             }
         }
     }
