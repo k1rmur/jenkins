@@ -6,7 +6,7 @@ pipeline {
                 script {
                     def scriptNumbers = (1..3).toList()
                     for(x in scriptNumbers){
-                        sh './test' + x + '.sh'
+                        sh 'tests/test' + x + '.sh'
                     }
                 }
             }
@@ -18,17 +18,17 @@ pipeline {
         }
         stage('Python threading check output') {
             steps {
-                sh 'python3 python_script/doctor.py'
+                sh 'python3 python_threading/doctor.py'
             }
         }
         stage('CPP Containers tests') {
             steps {
-                sh 'make'
+                sh 'CPP_containers/make'
             }
         }
         stage('CPP Containers clean') {
             steps {
-                sh 'make clean'
+                sh 'CPP_containers/clean'
             }
         }
     }
