@@ -6,7 +6,7 @@ pipeline {
                 script {
                     def scriptNumbers = (1..3).toList()
                     for(x in scriptNumbers){
-                        sh 'tests/test' + x + '.sh'
+                        sh 'sh_tests/test' + x + '.sh'
                     }
                 }
             }
