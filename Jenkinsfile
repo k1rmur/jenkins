@@ -4,7 +4,9 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    for(x in 1..3){
+                    // Convert the range to a list
+                    def scriptNumbers = (1..3).toList()
+                    for(x in scriptNumbers){
                         sh './test' + x + '.sh'
                     }
                 }
