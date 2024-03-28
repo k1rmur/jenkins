@@ -1,1 +1,1 @@
-__learning jenkins__
+__jenkins__
