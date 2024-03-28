@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-__jenkins__
-=======
-__jenkins__
->>>>>>> refs/remotes/origin/main
+__learning jenkins__
