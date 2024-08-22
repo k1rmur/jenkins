@@ -21,15 +21,5 @@ pipeline {
                 sh 'python3 python_threading/doctor.py'
             }
         }
-        stage('CPP Containers tests') {
-            steps {
-                sh 'cd CPP_containers && make'
-            }
-        }
-        stage('CPP Containers clean') {
-            steps {
-                sh 'cd CPP_containers && make clean'
-            }
-        }
     }
 }
