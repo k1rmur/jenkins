@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'python:3.9'  // Specify the Python version you need
+        }
+    }
     stages {
         stage('Echo in files') {
             steps {
