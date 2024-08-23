@@ -1,4 +1,7 @@
 pipeline {
+    agent any
+
+
     stages {
         stage('Echo in files') {
             steps {
