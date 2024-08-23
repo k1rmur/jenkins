@@ -1,9 +1,12 @@
 pipeline {
+<<<<<<< HEAD
     agent {
         docker {
             image 'python:3.9'  // Specify the Python version you need
         }
     }
+=======
+>>>>>>> 0666693 (python test)
     stages {
         stage('Echo in files') {
             steps {
